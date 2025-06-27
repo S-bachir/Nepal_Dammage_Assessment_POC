@@ -34,13 +34,13 @@ git clone https://github.com/yourusername/nepal-earthquake-assessment.git
 cd nepal-earthquake-assessment
 ```
 
-# Create conda environment
+## Create conda environment
 ```bash
 conda create -n earthquake-assessment python=3.9
 conda activate earthquake-assessment
 ```
 
-# Install dependencies
+## Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
