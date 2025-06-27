@@ -39,3 +39,83 @@ conda activate earthquake-assessment
 
 # Install dependencies
 pip install -r requirements.txt
+
+
+# Workflow
+
+The complete workflow is documented in the main notebook: `notebooks/damage_assessment_workflow.ipynb`
+
+
+## Pipeline Steps
+
+### 1. Data Acquisition (`scripts/data_acquisition.py`)
+
+- Fetches satellite imagery from multiple sources:
+  - Sentinel-2 Level-2A (ESA Copernicus)
+  - Sentinel-1 SAR GRD (ESA Copernicus)
+  - Landsat 8/9 Collection 2 (USGS)
+- Downloads ancillary data:
+  - OpenStreetMap building footprints
+  - SRTM Digital Elevation Model (NASA)
+  - Population density (CIESIN GPW v4.11)
+
+### 2. Preprocessing (`scripts/preprocessing.py`)
+
+- Image co-registration
+- Radiometric correction
+- Cloud masking
+- Creation of analysis-ready data
+
+### 3. Damage Analysis (`scripts/damage_analysis.py`)
+
+- Spectral change detection
+- Machine learning classification
+- Building-level damage assessment
+- Landslide detection
+
+### 4. Visualization (`scripts/visualization.py`)
+
+- Before/after satellite image comparisons
+- Damage classification maps
+- Interactive visualizations (e.g., via Folium or Plotly)
+- 3D terrain analysis
+
+### 5. Reporting (`scripts/reporting.py`)
+
+- PDF reports (e.g., via ReportLab or LaTeX)
+- Excel summaries (e.g., via Pandas)
+- GIS outputs (e.g., Shapefiles, GeoJSON)
+- Web dashboards (e.g., via Dash or Streamlit)
+
+## Data Sources
+
+- Sentinel-2 Level-2A (ESA Copernicus)
+- Sentinel-1 SAR GRD (ESA Copernicus)
+- Landsat 8/9 Collection 2 (USGS)
+- OpenStreetMap building footprints
+- SRTM Digital Elevation Model (NASA)
+- Population density (CIESIN GPW v4.11)
+
+## Results
+
+The workflow produces:
+
+- Damage classification maps
+- Building-level damage statistics
+- Landslide susceptibility maps
+- Comprehensive reports for disaster response
+
+## License
+
+This project is licensed under the **Mozilla Public License 2.0**. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- ESA Copernicus Programme for Sentinel data
+- USGS for Landsat imagery
+- OpenStreetMap contributors
+- NASA for SRTM elevation data
+
+## Contributing
+
+Contributions are welcome! Please submit pull requests or open issues for improvements and bug fixes.

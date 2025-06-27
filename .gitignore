@@ -93,3 +93,42 @@ _build/
 
 # setuptools-scm/
 src/*/_version.py
+
+
+# ... existing content ...
+
+# Satellite data
+*.tif
+*.tiff
+*.img
+*.hdf
+*.nc
+
+# GIS files
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.sbn
+*.sbx
+
+# Large data files
+data/downloads/
+data/processed/
+data/results/
+
+# Model files
+*.h5
+*.pkl
+*.joblib
+models/
+
+# Logs
+*.log
+logs/
+
+# API Keys and credentials
+.env
+credentials/
+*.json  # for service account files
