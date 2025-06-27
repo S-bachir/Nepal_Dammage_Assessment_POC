@@ -32,14 +32,18 @@ This project implements state-of-the-art satellite imagery analysis and GeoAI te
 # Clone the repository
 git clone https://github.com/yourusername/nepal-earthquake-assessment.git
 cd nepal-earthquake-assessment
+```
 
 # Create conda environment
+```bash
 conda create -n earthquake-assessment python=3.9
 conda activate earthquake-assessment
+```
 
 # Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 
 # Workflow
 
