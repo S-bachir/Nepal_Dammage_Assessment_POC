@@ -1,0 +1,30 @@
+{
+    "data_dir": "./data",
+    "earthquake": {
+        "date": "2023-11-03",
+        "epicenter": [
+            82.19,
+            28.84
+        ],
+        "magnitude": 6.4,
+        "affected_districts": [
+            "Jajarkot",
+            "Rukum West",
+            "Salyan"
+        ]
+    },
+    "date_ranges": {
+        "pre_start": "2023-09-01",
+        "pre_end": "2023-11-02",
+        "post_start": "2023-11-04",
+        "post_end": "2023-12-15"
+    },
+    "aoi_buffer_km": 50,
+    "cloud_threshold": 20,
+    "apis": {
+        "planet_api_key": "",
+        "maxar_api_key": "",
+        "copernicus_user": "",
+        "copernicus_pass": ""
+    }
+}

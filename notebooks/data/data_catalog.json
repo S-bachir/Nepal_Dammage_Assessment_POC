@@ -1,0 +1,45 @@
+{
+    "acquisition_date": "2025-06-27T01:53:30.412689",
+    "earthquake_info": {
+        "date": "2023-11-03",
+        "epicenter": [
+            82.19,
+            28.84
+        ],
+        "magnitude": 6.4,
+        "affected_districts": [
+            "Jajarkot",
+            "Rukum West",
+            "Salyan"
+        ]
+    },
+    "date_ranges": {
+        "pre_start": "2023-09-01",
+        "pre_end": "2023-11-02",
+        "post_start": "2023-11-04",
+        "post_end": "2023-12-15"
+    },
+    "data_sources": {
+        "sentinel2": {
+            "platform": "ESA Copernicus",
+            "resolution": "10m"
+        },
+        "landsat": {
+            "platform": "USGS",
+            "resolution": "30m"
+        },
+        "sentinel1": {
+            "platform": "ESA Copernicus",
+            "type": "SAR"
+        },
+        "planet": {
+            "platform": "Planet Labs",
+            "resolution": "3-5m"
+        },
+        "ancillary": {
+            "osm": "OpenStreetMap building footprints",
+            "srtm": "USGS SRTM elevation data",
+            "population": "CIESIN GPW v4.11"
+        }
+    }
+}
