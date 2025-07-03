@@ -30,7 +30,7 @@ This project implements state-of-the-art satellite imagery analysis and GeoAI te
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/nepal-earthquake-assessment.git
+git clone https://github.com/S-bachir/Nepal_Dammage_Assessment_POC.git
 cd nepal-earthquake-assessment
 ```
 
