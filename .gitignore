@@ -132,3 +132,7 @@ logs/
 .env
 credentials/
 *.json  # for service account files
+
+
+# Data folders
+notebooks/data/
