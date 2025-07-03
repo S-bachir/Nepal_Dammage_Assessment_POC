@@ -37,6 +37,10 @@ from typing import Dict, List, Tuple, Optional
 import logging
 from concurrent.futures import ThreadPoolExecutor
 import time
+# === Google Drive download helpers ===
+from pydrive2.auth import GoogleAuth
+from pydrive2.drive import GoogleDrive
+from tqdm import tqdm
 
 # Configure logging
 logging.basicConfig(
@@ -59,7 +63,9 @@ class EarthquakeDataAcquisition:
         self.config = self._load_config(config_path)
         self.data_dir = Path(self.config['data_dir'])
         self.data_dir.mkdir(exist_ok=True)
-        
+        # Set up local downloads directory
+        self.downloads_dir = self.data_dir / 'downloads'
+        self.downloads_dir.mkdir(exist_ok=True)
         # Initialize Google Earth Engine
         try:
             ee.Initialize()
@@ -245,7 +251,7 @@ class EarthquakeDataAcquisition:
         
         task = ee.batch.Export.image.toDrive(**export_params)
         task.start()
-        
+       
         logger.info(f"Export task '{description}' started. Check Google Drive folder '{folder}'")
         return task
     
